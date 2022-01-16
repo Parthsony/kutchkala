@@ -53,7 +53,7 @@
 
     <div class="container">
         <div class="row" id="main" style="margin-top: 5em;">
-           
+
         </div>
     </div>
 
@@ -68,7 +68,7 @@
         for (let i = 1; i <= 20; i++) {
 
             let div = document.createElement("div")
-            div.setAttribute("class", "column") 
+            div.setAttribute("class", "column")
 
             let element = document.createElement("img")
             element.setAttribute("src", "images/Bandhani_Saree/bandhani_saree_" + i + ".jpg");
@@ -80,13 +80,25 @@
             button.setAttribute("class", "btn btn-primary")
             button.textContent = "Bandhani Saree " + i;
             button.setAttribute("onclick", "myFunction(this.value)")
-            button.value = "saree " + 1
+            button.value = "saree " + i
 
             div.appendChild(element)
             div.appendChild(button)
 
             main.appendChild(div)
         }
+
+        let aTag = document.createElement("a")
+        aTag.setAttribute("id", "order")
+        aTag.setAttribute("target", "_blank")
+        main.appendChild(aTag)
+    }
+
+    function myFunction(value) {
+
+        let atag = document.getElementById("order")
+        atag.setAttribute("href", "https://api.whatsapp.com/send?phone=917874914422&text=Hi,%20I%20would%20like%20to%20get%20more%20information%20about%20product%20" + value)
+        atag.click()
     }
 </script>
 

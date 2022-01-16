@@ -53,7 +53,7 @@
 
     <div class="container">
         <div class="row" id="main" style="margin-top: 5em;">
-           
+
         </div>
     </div>
 
@@ -86,11 +86,18 @@
 
             main.appendChild(div)
         }
+
+        let aTag = document.createElement("a")
+        aTag.setAttribute("id", "order")
+        aTag.setAttribute("target", "_blank")
+        main.appendChild(aTag)
     }
 
-    function myFunction(kurti){
+    function myFunction(value) {
 
-        
+        let atag = document.getElementById("order")
+        atag.setAttribute("href", "https://api.whatsapp.com/send?phone=917874914422&text=Hi,%20I%20would%20like%20to%20get%20more%20information%20about%20product%20" + value)
+        atag.click()
     }
 </script>
 
