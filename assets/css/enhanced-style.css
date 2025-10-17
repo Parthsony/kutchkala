@@ -1,0 +1,135 @@
+/* Enhanced Product Card Styles */
+.product-card {
+  transition: all 0.3s ease;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info p {
+  flex: 1;
+  margin-bottom: 1rem !important;
+}
+
+.product-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+  opacity: 1;
+}
+
+.shadow-hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-primary-soft {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.decorative-border {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4850c, #ff6b35);
+  border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-image {
+    height: 200px;
+  }
+  
+  .product-info {
+    padding: 1rem !important;
+  }
+}
+
+/* Hero section enhancements */
+.hero-slide {
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    min-height: 70vh;
+    background-attachment: scroll;
+  }
+}
+
+/* Navigation enhancements */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Card equal height fix */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row.g-4 > [class*="col-"] {
+  display: flex;
+  align-items: stretch;
+}
+
+.row.g-4 > [class*="col-"] > .product-card {
+  width: 100%;
+}
+
+/* About Us section equal height cards */
+.about-stats-grid .row.g-3 > [class*="col-"] {
+  display: flex;
+  align-items: stretch;
+}
+
+.stat-card {
+  min-height: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mission-card, .vision-card {
+  min-height: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover, .vision-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
