@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Kutch Kala Haat - Premium Kutchi Handicrafts & Artisanal Products</title>
+  <meta name="description" content="Experience the finest Kutchi handicrafts, traditional textiles, and authentic food products. Premium quality ethnic products from the heart of Gujarat.">
+  <meta name="keywords" content="Kutch, Kutchi products, Bandhani, ethnic wear, handicrafts, Gujarat, A2 Ghee, Dabeli Masala">
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Bootstrap & Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-color: #c2410c;
+      --secondary-color: #0891b2;
+      --accent-color: #fbbf24;
+      --dark-color: #1f2937;
+      --light-bg: #f9fafb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark-color);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+    }
+
+    /* Modern Navbar */
+    .modern-navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      padding: 1rem 0;
+    }
+
+    .modern-navbar .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .modern-navbar .nav-link {
+      color: var(--dark-color);
+      font-weight: 500;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem !important;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .modern-navbar .nav-link:hover {
+      background: var(--light-bg);
+      color: var(--primary-color);
+    }
+
+    /* Hero Section */
+    .hero-modern {
+      min-height: 85vh;
+      background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 50%, #fca5a5 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 0 4rem;
+    }
+
+    .hero-modern::before {
+      content: '';
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(194, 65, 12, 0.1) 0%, transparent 70%);
+      top: -200px;
+      right: -200px;
+      border-radius: 50%;
+    }
+
+    .hero-modern::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(8, 145, 178, 0.1) 0%, transparent 70%);
+      bottom: -100px;
+      left: -100px;
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: #6b7280;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: block;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    /* Modern Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-item {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .product-item:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-img-wrap {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-item:hover .product-img-wrap img {
+      transform: scale(1.1);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: white;
+      color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    .product-item:hover .product-overlay {
+      opacity: 1;
+    }
+
+    .product-content {
+      padding: 1.5rem;
+    }
+
+    .product-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark-color);
+    }
+
+    .product-desc {
+      color: #6b7280;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .product-action {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Modern Button Styles */
+    .btn-modern {
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      border: none;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary-modern {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #ea580c 100%);
+      color: white;
+    }
+
+    .btn-primary-modern:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(194, 65, 12, 0.3);
+      color: white;
+    }
+
+    .btn-outline-modern {
+      background: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .btn-outline-modern:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .btn-success-modern {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      color: white;
+    }
+
+    .btn-success-modern:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+      color: white;
+    }
+
+    /* Features Section */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--accent-color) 0%, #f59e0b 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      color: white;
+    }
+
+    /* About Section */
+    .about-modern {
+      background: linear-gradient(135deg, #ede9fe 0%, #fce7f3 100%);
+      padding: 6rem 0;
+    }
+
+    .about-image {
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    /* Contact Section */
+    .contact-modern {
+      background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+      padding: 6rem 0;
+      color: white;
+    }
+
+    .contact-form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 2.5rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .form-control-modern {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .form-control-modern:focus {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: var(--accent-color);
+      color: white;
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+    }
+
+    .form-control-modern::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Footer */
+    .footer-modern {
+      background: #111827;
+      color: #9ca3af;
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer-modern a {
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-modern a:hover {
+      color: var(--accent-color);
+    }
+
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0.3rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #6b7280;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .title-accent {
+      color: var(--primary-color);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.8rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Modern Navigation -->
+  <nav class="navbar navbar-expand-lg modern-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-om me-2"></i>Kutch Kala
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-2">
+            <a href="https://api.whatsapp.com/send?phone=917874914422" 
+               class="btn btn-success-modern btn-sm" target="_blank">
+              <i class="fab fa-whatsapp me-1"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-modern">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="mb-4">
+            <span class="badge bg-white text-dark px-4 py-2 rounded-pill">
+              <i class="fas fa-sparkles text-warning me-1"></i> Premium Kutchi Products
+            </span>
+          </div>
+          <h1 class="hero-title">Authentic Crafts from the Heart of <span class="title-accent">Kutch</span></h1>
+          <p class="hero-subtitle">Discover handcrafted treasures, traditional textiles, and authentic food products that celebrate centuries of Gujarati heritage.</p>
+          
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#products" class="btn btn-primary-modern btn-modern">
+              <i class="fas fa-shopping-bag me-2"></i>Shop Collection
+            </a>
+            <a href="#about" class="btn btn-outline-modern btn-modern">
+              <i class="fas fa-book-open me-2"></i>Our Story
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">25+</span>
+              <span class="stat-label">Years</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5000+</span>
+              <span class="stat-label">Customers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">150+</span>
+              <span class="stat-label">Artisans</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+          <img src="images/evening-at-white-rann.jpg" alt="Kutch White Rann" 
+               class="img-fluid rounded-4 shadow-lg float-animation"
+               style="border-radius: 30px !important;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-5" style="padding: 6rem 0;">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our <span class="title-accent">Collections</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Handpicked selection of authentic Kutchi handicrafts, textiles, and artisanal food products
+      </p>
+
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-img-wrap">
+            <img src="images/A2_Ghee.jpeg" alt="Kutch A2 Ghee">
+            <span class="product-badge">🏆 Premium</span>
+            <div class="product-overlay">
+              <a href="https://api.whatsapp.com/send?phone=917874914422&text=Hi,%20I%20am%20interested%20in%20Kutch%20A2%20Ghee." 
+                 class="btn btn-success-modern btn-sm" target="_blank">
+                <i class="fab fa-whatsapp me-1"></i> Order Now
+              </a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h4 class="product-title">Kutch A2 Ghee</h4>
+            <p class="product-desc">Pure A2 Ghee from indigenous Kutchi cows, made using traditional bilona method</p>
+            <div class="product-action">
+              <div>
+                <small class="text-warning"><i class="fas fa-star"></i> 4.9/5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-img-wrap">
+            <img src="images/Dabeli_Masala.jpeg" alt="Dabeli Masala">
+            <span class="product-badge">🔥 Authentic</span>
+            <div class="product-overlay">
+              <a href="https://api.whatsapp.com/send?phone=917874914422&text=Hi,%20I%20am%20interested%20in%20Dabeli%20Masala." 
+                 class="btn btn-success-modern btn-sm" target="_blank">
+                <i class="fab fa-whatsapp me-1"></i> Order Now
+              </a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h4 class="product-title">Dabeli Masala</h4>
+            <p class="product-desc">Authentic blend from Mandvi, capturing the true flavors of coastal Kutch</p>
+            <div class="product-action">
+              <div>
+                <small class="text-warning"><i class="fas fa-star"></i> 4.8/5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-img-wrap">
+            <img src="images/Bandhani_Saree/bandhani_saree_4.jpg" alt="Bandhani Sarees">
+            <span class="product-badge">💎 Bridal</span>
+            <div class="product-overlay">
+              <a href="bandhanisaree.html" class="btn btn-primary-modern btn-sm">
+                <i class="fas fa-eye me-1"></i> View Collection
+              </a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h4 class="product-title">Bandhani Sarees</h4>
+            <p class="product-desc">Exquisite collection of traditional Bandhani sarees for special occasions</p>
+            <div class="product-action">
+              <div>
+                <small class="text-warning"><i class="fas fa-star"></i> 5.0/5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-img-wrap">
+            <img src="images/KUTCH-KESAR.webp" alt="Kutch Kesar Mango">
+            <span class="product-badge">🍃 Seasonal</span>
+            <div class="product-overlay">
+              <a href="https://api.whatsapp.com/send?phone=917874914422&text=Hi,%20I%20am%20interested%20in%20Kutch%20Kesar%20Mango." 
+                 class="btn btn-success-modern btn-sm" target="_blank">
+                <i class="fab fa-whatsapp me-1"></i> Order Now
+              </a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h4 class="product-title">Kutch Kesar Mango</h4>
+            <p class="product-desc">Premium Kesar mangoes from the orchards of Kutch, Gujarat</p>
+            <div class="product-action">
+              <div>
+                <small class="text-warning"><i class="fas fa-star"></i> 4.9/5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-img-wrap">
+            <img src="images/Bandhani_Dupatta/bandhani_dupatta_1.jpg" alt="Bandhani Dupattas">
+            <span class="product-badge">✨ Trendy</span>
+            <div class="product-overlay">
+              <a href="bandhanidupattas.html" class="btn btn-primary-modern btn-sm">
+                <i class="fas fa-eye me-1"></i> View Collection
+              </a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h4 class="product-title">Bandhani Dupattas</h4>
+            <p class="product-desc">Fashionable collection perfect for contemporary styling</p>
+            <div class="product-action">
+              <div>
+                <small class="text-warning"><i class="fas fa-star"></i> 4.8/5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="product-img-wrap">
+            <img src="images/Kurtis/kurti_4.jpg" alt="Designer Kurtis">
+            <span class="product-badge">👗 Casual</span>
+            <div class="product-overlay">
+              <a href="kurtis.html" class="btn btn-primary-modern btn-sm">
+                <i class="fas fa-eye me-1"></i> View Collection
+              </a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h4 class="product-title">Designer Kurtis</h4>
+            <p class="product-desc">Versatile collection blending traditional charm with modern style</p>
+            <div class="product-action">
+              <div>
+                <small class="text-warning"><i class="fas fa-star"></i> 4.7/5</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="https://api.whatsapp.com/send?phone=917874914422&text=Hi,%20I%20would%20like%20to%20explore%20more%20products." 
+           class="btn btn-primary-modern btn-modern btn-lg" target="_blank">
+          <i class="fab fa-whatsapp me-2"></i> View All Products on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5" style="padding: 6rem 0; background: var(--light-bg);">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Why Choose <span class="title-accent">Kutch Kala</span></h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        We're committed to preserving heritage while delivering excellence
+      </p>
+
+      <div class="features-grid">
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="feature-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h4>100% Authentic</h4>
+          <p class="text-muted">Every product is sourced directly from traditional artisans of Kutch</p>
+        </div>
+
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="feature-icon">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h4>Handcrafted</h4>
+          <p class="text-muted">Each piece is lovingly handmade using centuries-old techniques</p>
+        </div>
+
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="feature-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h4>Fast Delivery</h4>
+          <p class="text-muted">Serving customers across 30+ states with reliable shipping</p>
+        </div>
+
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h4>24/7 Support</h4>
+          <p class="text-muted">Our team is always ready to assist you via WhatsApp</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-modern">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="about-image">
+            <img src="images/KUTCH.jpg" alt="Kutch Heritage">
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="display-4 mb-4">Preserving the <span class="title-accent">Legacy of Kutch</span></h2>
+          <p class="lead mb-4">
+            For over 25 years, we've been the proud custodians of Kutchi heritage, bringing authentic handicrafts 
+            and traditional products to discerning customers worldwide.
+          </p>
+          <p class="mb-4">
+            Kutch is home to Dholaveera, one of the five largest Harappan sites and among India's most significant 
+            archaeological treasures. This rich history inspires everything we do.
+          </p>
+          <div class="row g-4 mb-4">
+            <div class="col-6">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle text-success fs-3 me-3"></i>
+                <div>
+                  <h5 class="mb-0">25+ Years</h5>
+                  <small class="text-muted">Of Heritage</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center">
+                <i class="fas fa-users text-primary fs-3 me-3"></i>
+                <div>
+                  <h5 class="mb-0">150+ Artisans</h5>
+                  <small class="text-muted">Master Craftsmen</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary-modern btn-modern">
+            <i class="fas fa-envelope me-2"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-modern">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="display-4 mb-4">Let's Start a <span style="color: var(--accent-color);">Conversation</span></h2>
+          <p class="mb-4" style="font-size: 1.1rem; opacity: 0.9;">
+            Have questions about our products? Want to place a custom order? We're here to help!
+          </p>
+          
+          <div class="mb-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-white bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="fas fa-phone-alt" style="color: var(--accent-color);"></i>
+              </div>
+              <div>
+                <h5 class="mb-0">+91 78749 14422</h5>
+                <small style="opacity: 0.8;">Mon - Sat, 9AM - 7PM</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-white bg-opacity-10 rounded-circle p-3 me-3">
+                <i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i>
+              </div>
+              <div>
+                <h5 class="mb-0">Kutch, Gujarat</h5>
+                <small style="opacity: 0.8;">India</small>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=917874914422" 
+             class="btn btn-success-modern btn-modern btn-lg" target="_blank">
+            <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="mb-3">
+                <input type="text" class="form-control form-control-modern" placeholder="Your Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control form-control-modern" placeholder="Email Address" required>
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control form-control-modern" placeholder="Phone Number">
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control form-control-modern" rows="4" 
+                          placeholder="Your Message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary-modern btn-modern w-100">
+                <i class="fas fa-paper-plane me-2"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-modern">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-4">
+          <h4 class="text-white mb-3" style="font-family: 'Cormorant Garamond', serif;">
+            <i class="fas fa-om me-2" style="color: var(--accent-color);"></i>Kutch Kala Haat
+          </h4>
+          <p class="mb-3">Preserving the rich heritage of Kutch through authentic handicrafts and traditional products.</p>
+          <div>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=917874914422" class="social-icon" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home">Home</a></li>
+            <li class="mb-2"><a href="#products">Products</a></li>
+            <li class="mb-2"><a href="#about">About Us</a></li>
+            <li class="mb-2"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-white mb-3">Our Products</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="bandhanisaree.html">Bandhani Sarees</a></li>
+            <li class="mb-2"><a href="bandhanidress.html">Bandhani Dresses</a></li>
+            <li class="mb-2"><a href="kurtis.html">Designer Kurtis</a></li>
+            <li class="mb-2"><a href="bedsheets.html">Bedsheets</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5 class="text-white mb-3">Newsletter</h5>
+          <p class="small mb-3">Subscribe to get updates on new products and offers.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary-modern">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255, 255, 255, 0.1);">
+      <div class="text-center py-3">
+        <p class="mb-0">© 2024 Kutch Kala Haat. All rights reserved. Made with <i class="fas fa-heart text-danger"></i> in Gujarat</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out',
+      once: true
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const message = `Name: ${formData.get('name')}%0AEmail: ${formData.get('email')}%0APhone: ${formData.get('phone')}%0AMessage: ${formData.get('message')}`;
+      window.open(`https://api.whatsapp.com/send?phone=917874914422&text=${message}`, '_blank');
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.modern-navbar');
+      if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
+      }
+    });
+  </script>
+
+</body>
+</html>
