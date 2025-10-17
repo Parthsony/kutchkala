@@ -133,3 +133,30 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
+/* Mobile Optimization for Products Section */
+@media (max-width: 768px) {
+  #our-products {
+    padding-top: 90px !important;
+  }
+  
+  #our-products .container-fluid {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  #our-products .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #our-products .col-lg-4,
+  #our-products .col-md-6 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .product-card {
+    margin-bottom: 15px;
+  }
+}
